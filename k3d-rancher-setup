@@ -15,15 +15,15 @@ for tool in ${tools_list}; do
 done
 
 ### Set our base config
-readonly cluster_name=${K3D_CLUSTER_NAME:-mycluster}
+readonly cluster_name=${K3D_CLUSTER_NAME:-s3kes22}
 readonly k3s_image=${K3D_K3S_IMAGE:-rancher/k3s}
 readonly k3s_version=${K3D_K3S_VERSION:-latest}
-readonly cluster_servers=${K3D_CLUSTER_SERVERS:-1}
-readonly cluster_agents=${K3D_CLUSTER_AGENTS:-3}
+readonly cluster_servers=${K3D_CLUSTER_SERVERS:-3}
+readonly cluster_agents=${K3D_CLUSTER_AGENTS:-6}
 readonly cluster_agent_volume=${K3D_AGENT_VOLUME:-./agent-volume}
 readonly dns_forwarders=${K3D_DNS_FORWARDERS:-undefined}
-readonly cluster_setup_registry=${K3D_SETUP_REGISTRY:-0}
-readonly cluster_setup_rancher=${K3D_SETUP_RANCHER:-0}
+readonly cluster_setup_registry=${K3D_SETUP_REGISTRY:-2}
+readonly cluster_setup_rancher=${K3D_SETUP_RANCHER:-3}
 readonly kubeconfig_dir=${KUBECONFIG_DIR:-./kubeconfig}
 readonly cert_manager_version="v1.3.1"
 
